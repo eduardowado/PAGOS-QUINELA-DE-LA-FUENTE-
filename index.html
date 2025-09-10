@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px
+        10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #003300; /* Verde oscuro */
+    }
+    .opcion-pago {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 25px;
+        margin-top: 20px;
+    }
+    .opcion-pago h3 {
+        margin-top: 0;
+        color: #1a1a1a;
+    }
+    .datos-bancarios {
+        background: #f9f9f9;
+        border-left: 5px solid #28a745;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+    .datos-bancarios p {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .whatsapp-link {
+        display: block;
+        padding: 15px 20px;
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+        background-color: #25D366; /* Color de WhatsApp */
+        text-decoration: none;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .copy-btn {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #efefef;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Instrucciones de Pago</h1>
+    <p style="text-align: center;">Sigue estos pasos para obtener tu código y participar en la quiniela.</p>
+
+    <!-- ÚNICA OPCIÓN: PAGO MANUAL -->
+    <div class="opcion-pago">
+        <h3>Pago por Transferencia Directa (SPEI)</h3>
+        <p>Paga el costo exacto de $30.00 por quiniela y recibe tu código por WhatsApp una vez que confirmemos tu pago de forma manual.</p>
+        <div class="datos-bancarios">
+            <p>
+                <span><strong>Beneficiario:</strong> EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ</span>
+                <button class="copy-btn" onclick="copyToClipboard('EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ', this)">Copiar</button>
+            </p>
+            <p>
+                <span><strong>CLABE Interbancaria:</strong> 044580256026457475</span>
+                <button class="copy-btn" onclick="copyToClipboard('044580256026457475', this)">Copiar</button>
+            </p>
+            <p>
+                <span><strong>Banco:</strong> Scotiabank</span>
+            </p>
+        </div>
+        <p><strong>Instrucción:</strong> Una vez hecha la transferencia, haz clic en el siguiente botón para enviar tu comprobante.</p>
+        <a href="https://wa.me/528131071919?text=Hola,%20te%20envío%20mi%20comprobante%20de%20pago%20para%20la%20quiniela." class="whatsapp-link" target="_blank">
+            📲 Enviar Comprobante por WhatsApp
+        </a>
+    </div>
+
+    <!-- Sección de la Comunidad -->
+    <div class="opcion-pago" style="margin-top: 30px; background-color: #eef7ee;">
+      <h3>Únete a Nuestra Comunidad</h3>
+      <p>Una vez que tengas tu código, únete a nuestra comunidad en WhatsApp para ver anuncios, resultados y convivir con los demás participantes.</p>
+      <a href="https://chat.whatsapp.com/FNoKLjc85H9FO399l5jOdZ" class="whatsapp-link" style="background-color: #128C7E;" target="_blank">
+          🏆 Unirse a la Comunidad
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text, buttonElement) {
+      // Usamos el método de 'execCommand' que es más compatible
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        buttonElement.innerText = '¡Copiado!';
+        setTimeout(() => {
+          buttonElement.innerText = 'Copiar';
+        }, 2000); // Vuelve al texto original después de 2 segundos
+      } catch (err) {
+        console.error('No se pudo copiar el texto', err);
+      }
+      document.body.removeChild(textArea);
+    }
+  </script>
+</body>
+</html>
