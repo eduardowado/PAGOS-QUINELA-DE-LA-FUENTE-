@@ -18,114 +18,191 @@
         background: #fff;
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 4px
-        10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     h1 {
         text-align: center;
-        color: #003300; /* Verde oscuro */
+        color: #003300;
+        margin-bottom: 5px;
     }
-    .opcion-pago {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 25px;
+    .subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+    .section-title {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
         margin-top: 20px;
+        color: #003300;
+        border-left: 5px solid #003300;
     }
-    .opcion-pago h3 {
-        margin-top: 0;
-        color: #1a1a1a;
+    .reglas-box {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 0.95em;
+    }
+    .highlight {
+        color: #d9534f; /* Rojo suave para énfasis */
+        font-weight: bold;
+    }
+    .premios-list {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        background: #fff8e1; /* Fondo amarillento */
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ffe0b2;
     }
     .datos-bancarios {
-        background: #f9f9f9;
-        border-left: 5px solid #28a745;
+        background: #f0fdf4; /* Verde muy claro */
+        border: 1px solid #bbf7d0;
         padding: 15px;
         margin-top: 15px;
-        border-radius: 5px;
+        border-radius: 8px;
     }
     .datos-bancarios p {
         margin: 10px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .whatsapp-link {
-        display: block;
-        padding: 15px 20px;
-        margin-top: 20px;
-        font-size: 18px;
-        color: white;
-        background-color: #25D366; /* Color de WhatsApp */
-        text-decoration: none;
-        border-radius: 6px;
-        text-align: center;
-        font-weight: bold;
+        flex-wrap: wrap;
     }
     .copy-btn {
         padding: 5px 10px;
         font-size: 0.8em;
         cursor: pointer;
-        border: 1px solid #ccc;
-        background-color: #efefef;
+        border: 1px solid #28a745;
+        background-color: #fff;
+        color: #28a745;
         border-radius: 4px;
         margin-left: 10px;
+        font-weight: bold;
+    }
+    .copy-btn:active {
+        background-color: #28a745;
+        color: white;
+    }
+    .whatsapp-link {
+        display: block;
+        padding: 15px 20px;
+        margin-top: 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #25D366;
+        text-decoration: none;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .comunidad-box {
+        margin-top: 30px;
+        background-color: #e3f2fd;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #bbdefb;
+    }
+    ul {
+        padding-left: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Instrucciones de Pago</h1>
-    <p style="text-align: center;">Sigue estos pasos para obtener tu código y participar en la quiniela.</p>
+    <h1>Quinielas De La Fuente</h1>
+    <p class="subtitle">Reglas, Costos y Métodos de Pago</p>
 
-    <!-- ÚNICA OPCIÓN: PAGO MANUAL -->
-    <div class="opcion-pago">
-        <h3>Pago por Transferencia Directa (SPEI)</h3>
-        <p>Paga el costo exacto de $30.00 por quiniela SEMANAL o
-          paga abono $200 o pago total $500 de inscripcion para quiniela de TEMPORADA y
-          recibe tu código por WhatsApp una vez que confirmemos tu pago de forma manual.</p>
-        <div class="datos-bancarios">
-            <p>
-                <span><strong>Beneficiario:</strong> EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ</span>
-                <button class="copy-btn" onclick="copyToClipboard('EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ', this)">Copiar</button>
-            </p>
-            <p>
-                <span><strong>CLABE Interbancaria:</strong> 044580256026457475</span>
-                <button class="copy-btn" onclick="copyToClipboard('044580256026457475', this)">Copiar</button>
-            </p>
-            <p>
-                <span><strong>Banco:</strong> Scotiabank</span>
-            </p>
-        </div>
-        <p><strong>Instrucción:</strong> Una vez hecha la transferencia, haz clic en el siguiente botón para enviar tu comprobante.</p>
-        <a href="https://wa.me/528131071919?text=Hola,%20te%20envío%20mi%20comprobante%20de%20pago%20para%20la%20quiniela." class="whatsapp-link" target="_blank">
-            📲 Enviar Comprobante por WhatsApp
-        </a>
+    <div class="section-title">🏆 PREMIOS (Temporada)</div>
+    <div class="reglas-box">
+        <p>El acumulado total (menos 15% gastos administrativos) se reparte así:</p>
+        <ul class="premios-list">
+            <li>🥇 <strong>1er Lugar:</strong> 60% del pozo</li>
+            <li>🥈 <strong>2do Lugar:</strong> 30% del pozo</li>
+            <li>🥉 <strong>3er Lugar:</strong> 10% del pozo</li>
+        </ul>
     </div>
 
-    <!-- Sección de la Comunidad -->
-    <div class="opcion-pago" style="margin-top: 30px; background-color: #eef7ee;">
-      <h3>Únete a Nuestra Comunidad</h3>
-      <p>Una vez que tengas tu código, únete a nuestra comunidad en WhatsApp para ver anuncios, resultados y convivir con los demás participantes.</p>
+    <div class="section-title">📅 MODO TEMPORADA (17 Jornadas)</div>
+    <div class="reglas-box">
+        <p>Participa en todo el torneo con un solo registro.</p>
+        <ul>
+            <li><strong>Costo Total:</strong> $500.00 MXN.</li>
+            <li><strong>Inscripción:</strong> Mínimo <strong>$100.00</strong> iniciales.</li>
+            <li><strong>Requisito:</strong> Debes liquidar el total antes de la <span class="highlight">Jornada 6</span>.</li>
+            <li><strong>1er Pago:</strong> Se realiza en la inscripcion antes de que empiece la <span class="highlight">Jornada 1</span>.</li>
+            <li><strong>2do Pago:</strong> Se realiza <strong>$200.00</strong> entre las <span class="highlight">Jornadas 2 a la 4</span>.</li>
+            <li><strong>3er Pago:</strong> Se liquidar el restante <strong>$200.00</strong> antes de la <span class="highlight">Jornada 6</span>.</li>
+            <li><i><strong>Nota:<strong> Si dejan de pagar como se les indica  no podran llenar su proxima quiniela y dejarian de hacer puntos. Si para la jornada 4 no dan 
+                        su segundo pago la jornada 5 no podran llenar su quiniela y en la 6 tendrian que pagar ese pago  o serian eliminados del juego y 
+                        perderian su dinero antes pagado igual con el 3er pago antes de la Jornada 6 su proxima jornada no valdria y tendrian hasta 
+                        antes de la Jornada 8 para pagar y seguir jugando sus jornadas Restantes <strong> Esto es para asegurar que los ganadores cobren su premio
+                        rápidamente al final. Te sugerimos abonar $100 por semana.<strong> </i></li>
+            <li><strong>Registro:</strong> Al pagar, envía tu nombre y la <strong>contraseña</strong> que usarás para jugar.</li>
+        </ul>
+    </div>
+
+    <div class="section-title">⚽ MODO SEMANAL</div>
+    <div class="reglas-box">
+        <p>Juega jornada a jornada sin compromisos a largo plazo.</p>
+        <ul>
+            <li><strong>Costo:</strong> $30.00 MXN por quiniela.</li>
+            <li><strong>Sin límite:</strong> Puedes pagar 1, 2, 3 o más quinielas.</li>
+            <li><strong>Sistema:</strong> Te entregaremos un <strong>Código con Créditos</strong>. Cada vez que envíes una quiniela, se descontará 1 crédito hasta agotarse.</li>
+        </ul>
+    </div>
+
+    <div class="section-title">💳 DATOS DE PAGO (Transferencia)</div>
+    <div class="datos-bancarios">
+        <p>
+            <span><strong>Banco:</strong> Scotiabank</span>
+        </p>
+        <p>
+            <span><strong>Nombre:</strong> EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ</span>
+            <button class="copy-btn" onclick="copyToClipboard('EDUARDO GUADALUPE DE LA FUENTE HERNANDEZ', this)">Copiar</button>
+        </p>
+        <p>
+            <span><strong>CLABE:</strong> 044580256026457475</span>
+            <button class="copy-btn" onclick="copyToClipboard('044580256026457475', this)">Copiar</button>
+        </p>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9em; margin-top:20px;">Una vez hecho el pago, envía tu comprobante aquí 👇</p>
+    <a href="https://wa.me/528131071919?text=Hola,%20te%20envío%20mi%20comprobante%20de%20pago%20para%20la%20quiniela." class="whatsapp-link" target="_blank">
+        📲 Enviar Comprobante por WhatsApp
+    </a>
+
+    <div class="comunidad-box">
+      <h3>👥 Únete a la Comunidad</h3>
+      <p>Recibe avisos y convive con otros participantes (Solo temas de fútbol y quiniela).</p>
       <a href="https://chat.whatsapp.com/FNoKLjc85H9FO399l5jOdZ" class="whatsapp-link" style="background-color: #128C7E;" target="_blank">
-          🏆 Unirse a la Comunidad
+          Unirse al Grupo
       </a>
     </div>
   </div>
 
   <script>
     function copyToClipboard(text, buttonElement) {
-      // Usamos el método de 'execCommand' que es más compatible
       const textArea = document.createElement('textarea');
       textArea.value = text;
       document.body.appendChild(textArea);
       textArea.select();
       try {
         document.execCommand('copy');
+        let originalText = buttonElement.innerText;
         buttonElement.innerText = '¡Copiado!';
         setTimeout(() => {
-          buttonElement.innerText = 'Copiar';
-        }, 2000); // Vuelve al texto original después de 2 segundos
+          buttonElement.innerText = originalText;
+        }, 2000);
       } catch (err) {
-        console.error('No se pudo copiar el texto', err);
+        console.error('No se pudo copiar', err);
       }
       document.body.removeChild(textArea);
     }
