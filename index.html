@@ -20,6 +20,25 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    /* Estilo para el botón de regreso en la esquina */
+    .btn-regreso-esquina {
+        position: absolute; /* Se fija en la posición que le digamos */
+        top: 15px;       /* Distancia desde arriba */
+        right: 15px;     /* Distancia desde la derecha */
+        background-color: #333; /* Color de fondo negro/gris */
+        color: white;    /* Color de letra */
+        text-decoration: none; /* Quitar subrayado */
+        padding: 8px 12px; /* Espacio interior */
+        border-radius: 5px; /* Bordes redondeados */
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        z-index: 9999; /* Asegura que quede encima de todo */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra suave */
+    }
+    .btn-regreso-esquina:hover {
+        background-color: #000; /* Cambia de color al pasar el mouse */
+    }
     h1 {
         text-align: center;
         color: #003300;
@@ -116,6 +135,9 @@
   </style>
 </head>
 <body>
+  <a href="https://eduardowado.github.io/Bienvenido-Quinelas-De-La-Fuente/" class="btn-regreso-esquina">
+    ↩ Volver al Inicio
+</a>
   <div class="container">
     <h1>Quinielas De La Fuente</h1>
     <p class="subtitle">Reglas, Costos y Métodos de Pago</p>
