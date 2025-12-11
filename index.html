@@ -20,24 +20,31 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    /* Estilo para el botón de regreso en la esquina */
-    .btn-regreso-esquina {
-        position: absolute; /* Se fija en la posición que le digamos */
-        top: 15px;       /* Distancia desde arriba */
-        right: 15px;     /* Distancia desde la derecha */
-        background-color: #333; /* Color de fondo negro/gris */
-        color: white;    /* Color de letra */
-        text-decoration: none; /* Quitar subrayado */
-        padding: 8px 12px; /* Espacio interior */
-        border-radius: 5px; /* Bordes redondeados */
+ /* Estilo para el botón FIJO anaranjado */
+    .btn-regreso-fijo {
+        position: fixed; /* Se queda pegado aunque bajes la pantalla */
+        top: 20px;       /* Distancia desde el techo */
+        right: 20px;     /* Distancia desde la derecha */
+        
+        /* Colores */
+        background-color: #ffcc80; /* Anaranjado claro */
+        color: #5d4037;            /* Letra café oscuro */
+        border: 2px solid #ffffff; /* Borde blanco */
+        
+        /* Diseño */
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 30px; 
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 13px;
-        z-index: 9999; /* Asegura que quede encima de todo */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra suave */
+        font-size: 14px;
+        z-index: 9999; /* Siempre visible encima de todo */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     }
-    .btn-regreso-esquina:hover {
-        background-color: #000; /* Cambia de color al pasar el mouse */
+
+    .btn-regreso-fijo:hover {
+        background-color: #ffb74d; 
+        transform: scale(1.05);    
     }
     h1 {
         text-align: center;
@@ -135,8 +142,9 @@
   </style>
 </head>
 <body>
-  <a href="https://eduardowado.github.io/Bienvenido-Quinelas-De-La-Fuente/" class="btn-regreso-esquina">
-    ↩ Volver al Inicio
+  <a href="https://eduardowado.github.io/Bienvenido-Quinelas-De-La-Fuente/" class="btn-regreso-fijo">
+    ↩ Regresar
+</a>
 </a>
   <div class="container">
     <h1>Quinielas De La Fuente</h1>
